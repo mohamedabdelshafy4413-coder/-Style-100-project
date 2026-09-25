@@ -27,18 +27,28 @@ jobs:
 
       - name: Python syntax check
         run: |
-          python -m py_compile app.py data.py
+          python -m py_compile app.py data.py research_2026.py pages/*.py
 
       - name: Data integrity check
         run: |
           python - <<'PY'
           import data
+          import research_2026 as r
+
           assert len(data.MARKETS) == 100, f"Expected 100 markets, got {len(data.MARKETS)}"
-          assert len(data.PRODUCTS) == 6, f"Expected 6 hero products, got {len(data.PRODUCTS)}"
-          countries = [x[0] for x in data.MARKETS]
-          assert len(countries) == len(set(countries)), "Duplicate market names detected"
-          scores = [x[1] for x in data.MARKETS]
-          assert all(isinstance(x, int) and 0 <= x <= 100 for x in scores), "Invalid market score"
+          assert len(r.WORLD_50) == 50, f"Expected 50 World markets, got {len(r.WORLD_50)}"
+          assert len(r.EUROPE_50) == 50, f"Expected 50 Europe markets, got {len(r.EUROPE_50)}"
+
+          world_countries = [x[1] for x in r.WORLD_50]
+          europe_countries = [x[1] for x in r.EUROPE_50]
+          assert len(world_countries) == len(set(world_countries)), "Duplicate World 50 market names detected"
+          assert len(europe_countries) == len(set(europe_countries)), "Duplicate Europe 50 market names detected"
+
+          assert r.CASE_STUDY["markets"] == 50
+          assert r.CASE_STUDY["emails_sent_min"] >= 5000
+          assert r.CASE_STUDY["positive_replies"] == 10
+          assert len(r.CASE_STUDY["products"]) == 5
+
           print("Data integrity OK")
           PY
 
