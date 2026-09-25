@@ -1,19 +1,26 @@
-# STYLE Global Export Intelligence 100
+# STYLE Global Export Intelligence 2026
 
-A fast Streamlit command center for STYLE for Marble & Granite.
+A fast Streamlit export command center for STYLE for Marble & Granite.
 
-## What is inside
+## Core dashboard
 - Executive command center
-- Global 100 market ranking
+- Original Global 100 market ranking
 - Golden 20 deep dive
-- Product-market fit for 6 hero materials
+- Product-market fit
 - Market explorer
-- 90-day GTM execution board
-- Country/persona campaign studio
-- Revenue scenario model
-- Lead file analyzer for CSV/XLSX
-- SWOT + positioning architecture
-- Evidence & methodology
+- 90-day GTM
+- Campaign studio
+- Revenue scenarios
+- Lead file analyzer
+- SWOT + evidence
+
+## New 2026 research modules
+- World 50 2026 — separate non-European priority list
+- Europe 50 / Extended Europe 2026 — independent European list with tiers
+- 5,000+ Email Campaign Case Study
+- Intensive Research & SWOT 2026
+- MASTER_STUDY_2026.md — full research thesis and execution plan
+- research_2026.py — structured research data used by dashboard pages
 
 ## Run
 
@@ -25,5 +32,5 @@ A fast Streamlit command center for STYLE for Marble & Granite.
 - Branch: main
 - Main file: app.py
 
-## Notes
-Market scores are strategic prioritization scores, not guaranteed success probabilities. Trade, tariff, customs, technical and buyer data should be re-verified before shipment or outreach.
+## Research discipline
+Market scores are strategic prioritization scores, not guaranteed success or reply probabilities. Shipment/buyer directories can contain broad or non-ideal entities; every account requires product/company verification before outreach. Trade, tariff, customs, technical and contact data should be re-verified before shipment or commercial commitment.
